@@ -1,6 +1,6 @@
 const socket = io();
 
-$("form").on("submit", function() {
+$("form").submit(function() {
     let text = $("#message").val();
     socket.emit("message", text);
     $("#message").val("");
